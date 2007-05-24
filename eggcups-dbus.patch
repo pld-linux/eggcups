@@ -1,0 +1,16 @@
+--- eggcups-0.20/ec-tray-icon.c~	2007-05-24 13:07:32.000000000 +0200
++++ eggcups-0.20/ec-tray-icon.c	2007-05-24 13:16:53.764620809 +0200
+@@ -249,13 +249,11 @@
+ 
+ 	rb_debug ("disposing");
+ 	if (icon->priv->system_dbus) {
+-		dbus_connection_close (icon->priv->system_dbus);
+ 		dbus_connection_unref (icon->priv->system_dbus);
+ 		icon->priv->system_dbus = NULL;
+ 	}
+ 
+ 	if (icon->priv->session_dbus) {
+-		dbus_connection_close (icon->priv->session_dbus);
+ 		dbus_connection_unref (icon->priv->session_dbus);
+ 		icon->priv->session_dbus = NULL;
+ 	}
