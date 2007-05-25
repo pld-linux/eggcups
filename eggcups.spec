@@ -16,6 +16,7 @@ BuildRequires:	intltool
 BuildRequires:	libglade2-devel
 BuildRequires:	libgnomecups-devel >= 0.1.12
 BuildRequires:	libgnomeui-devel
+BuildRequires:	xorg-lib-libXScrnSaver-devel
 Requires:	dbus
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
