@@ -18,7 +18,7 @@ BuildRequires:	libglade2-devel
 BuildRequires:	libgnomecups-devel >= 0.1.12
 BuildRequires:	libgnomeui-devel
 BuildRequires:	xorg-lib-libXScrnSaver-devel
-Requires(post,preun):	Gconf2
+Requires(post,preun):	GConf2
 Requires(post,postun):	hicolor-icon-theme
 Requires:	dbus
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
