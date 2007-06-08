@@ -2,7 +2,7 @@ Summary:	Desktop print icon
 Summary(pl.UTF-8):	Ikona drukowania na pulpicie
 Name:		eggcups
 Version:	0.20
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/eggcups/0.20/%{name}-%{version}.tar.bz2
