@@ -2,7 +2,7 @@ Summary:	Desktop print icon
 Summary(pl.UTF-8):	Ikona drukowania na pulpicie
 Name:		eggcups
 Version:	0.20
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/eggcups/0.20/%{name}-%{version}.tar.bz2
@@ -18,8 +18,9 @@ BuildRequires:	libglade2-devel
 BuildRequires:	libgnomecups-devel >= 0.1.12
 BuildRequires:	libgnomeui-devel
 BuildRequires:	xorg-lib-libXScrnSaver-devel
-Requires(post,preun):	GConf2
+Requires(post,postun):	gtk-update-icon-cache
 Requires(post,postun):	hicolor-icon-theme
+Requires(post,preun):	GConf2
 Requires:	dbus
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -71,5 +72,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/gnome-default-printer
 %{_datadir}/eggcups
 %{_desktopdir}/gnome-default-printer.desktop
-%{_sysconfdir}/dbus-1/system.d/*.conf
+/etc/dbus-1/system.d/*.conf
 %{_sysconfdir}/gconf/schemas/*
