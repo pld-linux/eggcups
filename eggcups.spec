@@ -34,7 +34,7 @@ do powiadamiania i sterowania zadań drukowania przez użytkownika.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{configure} \
