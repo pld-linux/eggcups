@@ -75,5 +75,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/gnome-default-printer
 %{_datadir}/eggcups
 %{_desktopdir}/gnome-default-printer.desktop
-/etc/dbus-1/system.d/*.conf
-%{_sysconfdir}/gconf/schemas/*
+/etc/dbus-1/system.d/printdriverselector.conf
+%{_sysconfdir}/gconf/schemas/eggcups.schemas
