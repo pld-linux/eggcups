@@ -5,7 +5,7 @@ Version:	0.20
 Release:	3
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/eggcups/0.20/%{name}-%{version}.tar.bz2
+Source0:	https://download.gnome.org/sources/eggcups/0.20/%{name}-%{version}.tar.bz2
 # Source0-md5:	deaf598120961765bfef61ecd4101ed3
 Patch0:		%{name}-dbus.patch
 BuildRequires:	cups-devel
