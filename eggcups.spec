@@ -37,14 +37,17 @@ do powiadamiania i sterowania zadań drukowania przez użytkownika.
 %patch -P0 -p1
 
 %build
-%{configure} \
-	--with-session-cupsd=no
+%configure \
+	--without-session-cupsd
+
 # fix dbus paths
 find . -type f -print0 \( -name '*.c' -o -name '*.h' -o -name '*.conf' \) | xargs -0 perl -pi -e 's,org/freedesktop/,com/redhat/,g;s,org.freedesktop.,com.redhat.,g'
+
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
